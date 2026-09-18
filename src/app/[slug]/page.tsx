@@ -20,15 +20,16 @@ export default async function CardPage({
 
   return (
     <main className="flex min-h-screen flex-col bg-background">
-      <div className=" px-6 py-2 sm:py-12">
+      <div className="px-6 pt-24 pb-12">
         <div className="mx-auto w-full max-w-lg">
           <div className="mb-8 flex items-baseline justify-between">
             <Link
               href="/"
               className="font-mono text-xs transition-colors duration-500"
             >
-              <span className="text-text-faint">/</span>{" "}
-              <span className="text-text-link">home</span>
+              <span className="text-text-faint">
+                /<span className="text-text-link">home</span>
+              </span>{" "}
             </Link>
             <ThemeToggle />
           </div>
