@@ -10,7 +10,7 @@ export default function HomePage() {
   const isTwoCol = COLUMNS === 2;
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background md:min-h-0">
       <div
         className={`mx-auto w-full px-6 py-24 sm:py-32 ${
           isTwoCol ? "max-w-3xl" : "max-w-md"
@@ -50,18 +50,16 @@ export default function HomePage() {
                   priority={i === 0}
                 />
               </div>
-              <p className=" mt-3 truncate text-sm font-light text-text">
+              <p className="mt-3 truncate text-sm font-light text-text">
                 {card.title}
-              </p>
-              <p className="font-mono text-[10px] text-text-faint">
-                {card.photos.length}{" "}
-                {card.photos.length === 1 ? "photo" : "photos"}
               </p>
             </Link>
           ))}
         </div>
 
-        <Footer />
+        <div className="mt-20">
+          <Footer />
+        </div>
       </div>
     </main>
   );

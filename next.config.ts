@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const cloudName = process.env.CLOUDINARY_CLOUD_NAME || "**";
+const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "**";
 
 if (!cloudName) {
   throw new Error("missing cloudinary name in env");

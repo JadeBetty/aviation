@@ -1,4 +1,4 @@
-const CLOUD = process.env.CLOUDINARY_CLOUD_NAME || "**";
+const CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "**";
 
 if (!CLOUD) {
   throw new Error("missing cloudinary name in env");

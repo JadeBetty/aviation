@@ -20,14 +20,15 @@ export default async function CardPage({
 
   return (
     <main className="flex min-h-screen flex-col bg-background">
-      <div className="flex flex-1 flex-col px-6 py-12 sm:py-16">
-        <div className="mx-auto my-auto w-full max-w-lg">
+      <div className=" px-6 py-2 sm:py-12">
+        <div className="mx-auto w-full max-w-lg">
           <div className="mb-8 flex items-baseline justify-between">
             <Link
               href="/"
-              className="font-mono text-xs text-text-faint transition-colors duration-500 hover:text-text-muted"
+              className="font-mono text-xs transition-colors duration-500"
             >
-              ← back
+              <span className="text-text-faint">/</span>{" "}
+              <span className="text-text-link">home</span>
             </Link>
             <ThemeToggle />
           </div>
@@ -51,7 +52,7 @@ export default async function CardPage({
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-lg px-6 pb-6">
+      <div className="mx-auto mt-2 w-full max-w-lg px-6 pb-6">
         <Footer />
       </div>
     </main>
