@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-background: #fafafa;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-text-faint: #a3a3a3;
+  --color-border: #e8e8e8;
+  --color-card: #f5f5f5;
+  --color-card-hover: #ececec;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --shadow-popover: 0 6px 24px -10px rgb(0 0 0 / 0.08);
+
+  --animate-fade-in: fade-in 0.4s ease both;
+  --animate-slide-up: slide-up 0.5s ease both;
+  --animate-scale-in: scale-in 0.3s ease both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.dark {
+  --color-background: #0e0e0e;
+  --color-text: #ededed;
+  --color-text-muted: #a0a0a0;
+  --color-text-faint: #6b6b6b;
+  --color-border: #1e1e1e;
+  --color-card: #161616;
+  --color-card-hover: #1c1c1c;
+  --shadow-popover: 0 6px 24px -10px rgb(0 0 0 / 0.6);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+  }
 }

@@ -1,0 +1,33 @@
+export type Photo = {
+  id: string;
+  publicId: string;
+  caption: string;
+};
+
+export type GalleryCard = {
+  slug: string;
+  title: string;
+  coverId: string;
+  photos: Photo[];
+};
+
+export const galleryCards: GalleryCard[] = [
+  {
+    slug: "pnh_vdpp",
+    title: "phnom penh intl. airport",
+    coverId: "xxxx.jpg",
+    photos: [
+      {
+        id: "p1",
+        publicId: "xxxx",
+        caption: "meow!!",
+      },
+      {
+        id: "p2",
+        publicId: "xxxx",
+        caption: "you catboy!",
+      },
+    ],
+  },
+];
+
