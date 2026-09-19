@@ -29,14 +29,18 @@ export default async function CardPage({
             >
               <span className="text-text-faint">
                 /<span className="text-text-link">home</span>
-              </span>{" "}
+              </span>
             </Link>
-            <ThemeToggle />
+            <div className="flex items-baseline gap-2">
+              <ThemeToggle />
+              <span className="font-mono text-xs text-text-faint">
+                {card.photos.length}
+              </span>
+            </div>
           </div>
-
           <div className="mb-8">
             <h1 className="mb-1 font-mono text-xs tracking-widest text-text-faint">
-              /{card.slug}
+              {card.slug.replaceAll("_", "/")}
             </h1>
             <p className="text-2xl font-light text-text">{card.title}</p>
             <p className="mt-1 font-mono text-[10px] text-text-faint">
