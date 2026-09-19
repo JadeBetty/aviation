@@ -28,7 +28,7 @@ export default async function CardPage({
               className="font-mono text-xs transition-colors duration-500"
             >
               <span className="text-text-faint">
-                /<span className="text-text-link">home</span>
+                /<span className="text-text-link ml-0.5">home</span>
               </span>
             </Link>
             <div className="flex items-baseline gap-2">
